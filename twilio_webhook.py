@@ -12,7 +12,7 @@ def whatsapp():
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant that finds car parts for South Africans. Ask about vehicle make/model/year, part needed, urgency, location, and contact info."},
             {"role": "user", "content": incoming_msg}
